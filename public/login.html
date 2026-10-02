@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelogenAI — Login</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/login.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <a class="brand" href="/">Velogen<span>AI</span></a>
+    <nav><a href="/">Public gallery</a></nav>
+</header>
+
+<main class="auth-container">
+    <section class="panel">
+        <h1 id="form-title">Welcome back</h1>
+        <p id="form-description" class="muted">
+            Log in to create and manage your images.
+        </p>
+
+        <p id="message" class="message" role="status" hidden></p>
+
+        <form id="auth-form">
+            <div id="username-field" hidden>
+                <label for="username">Username</label>
+                <input
+                        id="username"
+                        type="text"
+                        autocomplete="username"
+                        minlength="3"
+                        maxlength="30"
+                        pattern="[a-zA-Z0-9_]{3,30}"
+                >
+                <p class="muted">3–30 letters, numbers or underscores.</p>
+            </div>
+
+            <label for="email">Email</label>
+            <input
+                    id="email"
+                    type="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+            >
+
+            <label for="password">Password</label>
+            <input
+                    id="password"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+            >
+
+            <button id="submit-button" type="submit">Login</button>
+        </form>
+
+        <button id="switch-button" class="secondary switch-button" type="button">
+            Need an account? Register
+        </button>
+    </section>
+</main>
+</body>
+</html>

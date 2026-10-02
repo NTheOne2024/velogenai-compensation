@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelogenAI — Image Generator</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <a class="brand" href="/">Velogen<span>AI</span></a>
+
+    <nav>
+        <span id="account-label">Guest</span>
+        <a id="login-link" href="/login.html">Login / Register</a>
+        <a id="admin-link" href="/admin.html" hidden>Admin</a>
+        <button id="logout-button" class="secondary" hidden>Logout</button>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="intro">
+        <p class="eyebrow">YOUR IDEAS, VISUALIZED</p>
+        <h1>Turn a prompt into an image.</h1>
+        <p>Describe your idea and let AI bring it to life.</p>
+    </section>
+
+    <p id="message" class="message" role="status" hidden></p>
+
+    <section id="guest-notice" class="panel" hidden>
+        <h2>Create your own images</h2>
+        <p>Log in or register to generate images and manage your history.</p>
+        <a class="button" href="/login.html">Get started</a>
+    </section>
+
+    <section id="generator-section" class="panel" hidden>
+        <h2>Generate an image</h2>
+
+        <form id="generation-form">
+            <label for="prompt">Your prompt</label>
+            <textarea
+                    id="prompt"
+                    name="prompt"
+                    rows="4"
+                    maxlength="2000"
+                    placeholder="A cozy cabin beside a lake at sunset..."
+                    required
+            ></textarea>
+
+            <p class="muted">
+                Images start private. You can share completed images
+                in the public gallery.
+            </p>
+
+            <button id="generate-button" type="submit">Generate image</button>
+        </form>
+    </section>
+
+    <section id="history-section" hidden>
+        <h2>Your generation history</h2>
+        <div id="history" class="grid"></div>
+    </section>
+
+    <section>
+        <h2>Public gallery</h2>
+        <p class="muted">Images shared by registered users.</p>
+        <div id="gallery" class="grid"></div>
+    </section>
+</main>
+
+<footer>
+    VelogenAI · University exercise by Noor Shehadeh
+</footer>
+</body>
+</html>

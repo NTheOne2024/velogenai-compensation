@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelogenAI — Administration</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/admin.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <a class="brand" href="/">Velogen<span>AI</span></a>
+
+    <nav>
+        <span id="account-label">Checking access...</span>
+        <a href="/">Homepage</a>
+        <button id="logout-button" class="secondary" hidden>Logout</button>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Administration</h1>
+
+    <p id="message" class="message" role="status" hidden></p>
+
+    <div id="admin-content" hidden>
+        <section>
+            <h2>Users</h2>
+            <p class="muted">
+                View registered users and delete accounts.
+                Your own admin account cannot be deleted here.
+            </p>
+            <div id="users" class="grid"></div>
+        </section>
+
+        <section>
+            <h2>All generations</h2>
+            <p class="muted">
+                Manage generations belonging to any user.
+            </p>
+            <div id="generations" class="grid"></div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    VelogenAI · University exercise by Noor Shehadeh
+</footer>
+</body>
+</html>
