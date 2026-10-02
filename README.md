@@ -66,11 +66,9 @@ POST https://api.segmind.com/v1/fast-flux-schnell
 
 The server sends the prompt, four generation steps, and a square aspect ratio. It authenticates using the `x-api-key` header and saves the returned image locally.
 
-To create your own key, sign in at [Segmind's API Keys page](https://platform.segmind.com/api-keys), create a key, and place it in `.env`. Your account needs available credits. See the [Segmind quickstart](https://docs.segmind.com/docs/get-started/quickstart).
-
 **The key I used is a real, working Segmind key. Generations are real API calls, not simulated results, and each image generated with my key is paid for from my Segmind balance. In my setup, the estimated cost is around a tenth of a cent per image. Please do not let this small cost hold you back from experimenting with image generation for assessment and testing purposes.**
 
-My key is not included in the repository. For assessment, I will provide it separately so it can be entered into `.env`. If you use your own key, the cost comes from your own Segmind balance instead.
+I will send the Segmind API key to the instructors by email. Please enter it as `SEGMIND_API_KEY` in your local `.env` file. You may use your own key, but Segmind currently has a minimum top-up of $10. I recommend using my key for assessment so you do not need to pay for testing, since I already use Segmind for my own website and have a funded account. The key is not included in this repository.
 
 ## Build and start
 
